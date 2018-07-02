@@ -1,0 +1,35 @@
+server:
+  port: 9090
+  compression: # embedded tomcat 기동 시에 사용되는 설정. tomcat server 에서 실행할 경우는 server.xml 에 설정.
+    min-response-size: 1
+    enabled: true
+
+spring:
+  application:
+    name: demo
+  profiles:
+    active: local # default profile
+
+demo.info:
+  codeA: codeA
+  codeB: codeB
+
+---
+spring:
+  profiles: local
+
+---
+spring:
+  profiles: dev
+
+---
+spring:
+  profiles: qa
+
+---
+spring:
+  profiles: stg
+
+---
+spring:
+  profiles: prod

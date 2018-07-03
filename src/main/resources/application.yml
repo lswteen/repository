@@ -9,6 +9,10 @@ spring:
     name: demo
   profiles:
     active: local # default profile
+  mvc:
+    static-path-pattern: /static/**
+  resources:
+    static-locations:
 
 demo.info:
   codeA: codeA

@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component
 
 @Component
 @ConfigurationProperties(prefix = "demo.info")
-class DemoConfig{
-    var codeA : String = ""
-    var codeB : String = ""
+object DemoConfig{
+    val codeA: String = ""
+    val codeB: String = ""
 }
